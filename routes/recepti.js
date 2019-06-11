@@ -15,7 +15,7 @@ var datasql2= "SELECT content.id, content.title, content.description, content.im
 /* GET home page. */
 router.get('/', function(req, res, next) {
     connection.query(countsql1, function(err, count) {
-        var limit = 6;
+        var limit = 12;
         var offset = 0;
         var pages = parseInt((count.length / limit) + 0.9);
         var current = 1;
@@ -57,7 +57,7 @@ router.get('/page/:p', function(req, res, next) {
 
     connection.query(countsql1, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -101,7 +101,7 @@ router.get('/dorucak/:p', function(req, res, next) {
 
     connection.query(countsql,1, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -144,7 +144,7 @@ router.get('/rucak/:p', function(req, res, next) {
 
     connection.query(countsql,2, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -187,7 +187,7 @@ router.get('/vecera/:p', function(req, res, next) {
 
     connection.query(countsql,3, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -229,7 +229,7 @@ router.get('/salate/:p', function(req, res, next) {
 
     connection.query(countsql,4, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -271,7 +271,7 @@ router.get('/dezerti/:p', function(req, res, next) {
 
     connection.query(countsql,5, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
@@ -313,7 +313,7 @@ router.get('/decija/:p', function(req, res, next) {
 
     connection.query(countsql,6, function(err, count) {
         var p = req.param("p");
-        var limit = 6;
+        var limit = 12;
         var offset = limit * (p - 1);
         var pages = parseInt((count.length / limit) + 0.9);
         var current = p;
