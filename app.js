@@ -10,7 +10,7 @@ var passport = require('passport');
 
 require('./passport')(passport);
 
-mongoose.connect('mongodb://localhost:27017/psajtdb');
+mongoose.connect('mongodb://localhost:27017/vegan');
 
 
 var index = require('./routes/index');
