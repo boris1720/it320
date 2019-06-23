@@ -49,7 +49,7 @@ router.post('/upload', function(req, res) {
     var title = req.body.title;
     console.log(img.length);
     if(img.length === undefined){
-        img.mv("../it320/public/assets/images/upload/" + img.name, function (err) {
+        img.mv("public/assets/images/upload/" + img.name, function (err) {
             if (err)
                 return res.status(500).send(err);
 
