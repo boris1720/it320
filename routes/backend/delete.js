@@ -34,9 +34,9 @@ router.get('/:id',loggedin, function(req, res, next) {
                     var da = rows8;
                     var sa = da[0].frequency;
                         if(sa === 1){
-                            console.log("freq: " + sa + " deleted!" + tagid);
-                            connection.query(tagsqls,tagid , function(err, rows) {
 
+                            connection.query(tagsqls,tagid , function(err, rows) {
+                                console.log("freq: " + sa + " deleted!" + tagid);
                             });
                         }
                         if(sa > 1) {
@@ -48,15 +48,18 @@ router.get('/:id',loggedin, function(req, res, next) {
                 });
             });
 
-        connection.query(deletesql,id , function(err, rows2) {
+
+    });
+
+    connection.query(deletesql,id , function(err, rows2) {
         if (!err) {
             res.redirect('/admin');
         }
         else {
-            console.log('Error while performing Queryd.');
+            console.log('Error while performing Querydz.');
         }
-        });
     });
+
 });
 
 
