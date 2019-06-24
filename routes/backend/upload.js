@@ -73,7 +73,7 @@ router.post('/upload', function(req, res) {
 
         img.forEach(function(slika) {
             // Use the mv() method to place the file somewhere on your server
-            slika.mv("../it320/public/assets/images/upload/" + slika.name, function (err) {
+            slika.mv("public/assets/images/upload/" + slika.name, function (err) {
                 if (err)
                     return res.status(500).send(err);
 
