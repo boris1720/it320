@@ -15,7 +15,7 @@ var loggedin = function (req, res, next) {
 var selectsql1 = "SELECT * FROM tag_content WHERE content_id = ?";
 var selectsql2 = "SELECT * FROM tag WHERE id = ?";
 
-var deletesql = "DELETE FROM `content` WHERE `id` = ?";
+var deletesql = "DELETE FROM `content` WHERE `content`.`id` = ?";
 var tagsqls = "DELETE FROM `tag` WHERE id = ?";
 
 var sql3="UPDATE `tag` SET `frequency` = `frequency` - 1 WHERE `id` = ?";
